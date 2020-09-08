@@ -50,7 +50,9 @@ for i in range(len(notes)-seq):
         temp.append(note_dict[note])
     input.append(temp)
     output.append(note_dict[seq_out])
+    
 
+n_vocab = len(set(notes))
 input = numpy.reshape(input, (len(input),seq,1))
 input = input/float(len(pitchnames))
 oh_output = (np_utils.to_categorical(output))
